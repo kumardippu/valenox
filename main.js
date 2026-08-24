@@ -1,6 +1,6 @@
 // Scroll reveals + a border on the nav once the page has scrolled.
 
-document.querySelectorAll('.feature, .trio__item, .card, .split__text, .split__shot, .section__head, .placeholder')
+document.querySelectorAll('.feature, .trio__item, .card, .split__text, .split__shot, .section__head, .get__cta')
   .forEach(el => el.classList.add('reveal'));
 
 const io = new IntersectionObserver((entries) => {
