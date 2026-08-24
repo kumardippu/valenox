@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+  /* Background plates for the YouTube ad. One 1920x1080 tile per voiceover beat,
+     stacked vertically, plus a final alignment mask tile. Sliced with ffmpeg. */
+  :root {
+    --screen-x: 1268px; --screen-y: 110px;
+    --screen-w: 387px;  --screen-h: 860px; --screen-r: 34px;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#05070d; width:1920px; }
+
+  .tile {
+    position:relative;
+    width:1920px; height:1080px;
+    overflow:hidden;
+    font-family: Manrope, -apple-system, "Segoe UI", sans-serif;
+    background:
+      radial-gradient(900px 700px at 78% -12%, rgba(47,107,255,.34), transparent 66%),
+      radial-gradient(820px 680px at 2% 42%, rgba(76,201,255,.16), transparent 70%),
+      #05070d;
+  }
+  .tile::after {
+    content:""; position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+    background-size:64px 64px;
+    mask-image: radial-gradient(circle at 34% 46%, #000 0%, transparent 74%);
+    -webkit-mask-image: radial-gradient(circle at 34% 46%, #000 0%, transparent 74%);
+  }
+
+  .brand { position:absolute; left:140px; top:88px; display:flex; align-items:center; gap:14px; z-index:3; }
+  .brand img { width:40px; height:40px; }
+  .brand span { font-size:24px; font-weight:800; color:#e8edf7; letter-spacing:-.01em; }
+
+  .copy { position:absolute; left:140px; top:50%; transform:translateY(-50%); width:940px; z-index:3; }
+  .eyebrow {
+    font-size:20px; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+    color:#4cc9ff; margin-bottom:26px;
+  }
+  .head {
+    font-size:72px; font-weight:800; line-height:1.1; letter-spacing:-.025em;
+    color:#e8edf7; white-space:pre-line;
+  }
+  .sub { font-size:28px; font-weight:500; color:#94a1bb; margin-top:26px; }
+
+  /* phone bezel — the video is composited into the hole by ffmpeg */
+  .bezel {
+    position:absolute;
+    left:1254px; top:96px; width:415px; height:888px;
+    border-radius:48px;
+    background:#0b0f1a;
+    border:2px solid #223049;
+    box-shadow: 0 0 110px rgba(76,201,255,.30), 0 40px 80px rgba(0,0,0,.55);
+    z-index:2;
+  }
+
+  /* end card */
+  .end { display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; position:relative; z-index:3; }
+  .end img { width:104px; height:104px; margin-bottom:34px; }
+  .end .word { font-size:104px; font-weight:800; letter-spacing:-.03em; color:#e8edf7; line-height:1; }
+  .end .cta {
+    margin-top:32px; font-size:34px; font-weight:700;
+    background:linear-gradient(90deg,#4cc9ff,#a9e2ff); -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .end .langs { margin-top:20px; font-size:24px; font-weight:500; color:#94a1bb; letter-spacing:.04em; }
+
+  /* alignment mask: white rounded rect = video area, black elsewhere */
+  .masktile { position:relative; width:1920px; height:1080px; background:#000; overflow:hidden; }
+  .masktile .hole {
+    position:absolute;
+    left:var(--screen-x); top:var(--screen-y);
+    width:var(--screen-w); height:var(--screen-h);
+    border-radius:var(--screen-r);
+    background:#fff;
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+const MARK = "valenox-mark-dark.svg";
+const beats = [
+  { eyebrow:"Valenox",              head:"Your family's daily\nhealth companion." },
+  { eyebrow:"AI food scanner",      head:"Photograph your plate.\nIt knows Indian food." },
+  { eyebrow:"Every single day",     head:"Steps.\nWater." },
+  { eyebrow:"Heart rate",           head:"Know your\nresting pulse." },
+  { eyebrow:"Breathing exercise",   head:"Two minutes to\ncalm down." },
+  { eyebrow:"Medicine reminders",   head:"Never miss\na dose." },
+  { eyebrow:"Daily health score",   head:"One number for\nyour whole day." },
+  { eyebrow:"Trends",               head:"See today's\nnumbers." },
+  { eyebrow:"Trends",               head:"Weekly and monthly\npatterns." },
+  { eyebrow:"For the whole family", head:"Lab reports. Vaccines.\nRemedies. Records." },
+  { eyebrow:"Private by design",    head:"No account.\nNo subscription.", sub:"Your data stays on your phone." },
+];
+
+let html = "";
+for (const b of beats) {
+  html += `
+  <div class="tile">
+    <div class="brand"><img src="${MARK}"><span>Valenox</span></div>
+    <div class="copy">
+      <div class="eyebrow">${b.eyebrow}</div>
+      <div class="head">${b.head}</div>
+      ${b.sub ? `<div class="sub">${b.sub}</div>` : ""}
+    </div>
+    <div class="bezel"></div>
+  </div>`;
+}
+
+// end card
+html += `
+  <div class="tile">
+    <div class="end">
+      <img src="${MARK}">
+      <div class="word">Valenox</div>
+      <div class="cta">Free on Google Play</div>
+      <div class="langs">English &nbsp;·&nbsp; हिंदी &nbsp;·&nbsp; No account needed</div>
+    </div>
+  </div>`;
+
+// alignment mask
+html += `<div class="masktile"><div class="hole"></div></div>`;
+
+document.getElementById("root").innerHTML = html;
+
+// ?tile=N renders a single 1920x1080 plate, for headless screenshotting
+const tile = new URLSearchParams(location.search).get("tile");
+if (tile !== null) {
+  document.documentElement.style.overflow = "hidden";
+  document.body.style.height = "1080px";
+  document.body.style.overflow = "hidden";
+  document.getElementById("root").style.transform = `translateY(${-tile * 1080}px)`;
+}
+</script>
+</body>
+</html>

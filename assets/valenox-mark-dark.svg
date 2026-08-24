@@ -1,0 +1,6 @@
+<!-- Landing-page variant of the launcher mark: same geometry, but the indigo pulse
+     is lifted to the page's blue so it reads against the dark background. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108" role="img" aria-label="Valenox">
+  <path d="M54,30 A24,24 0 1,1 30,54" fill="none" stroke="#2AA198" stroke-width="7" stroke-linecap="round"/>
+  <path d="M30,54 L38,54 L43,45 L50,63 L56,50 L60,54 L78,54" fill="none" stroke="#8FD9FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

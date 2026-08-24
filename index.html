@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Valenox — Your health stays on your phone</title>
+<meta name="description" content="A free, local-first daily health companion for Indian families. AI food scanning, camera heart rate, step and water tracking, medicine reminders that actually fire, and a daily health score. English and Hindi. No account, no cloud.">
+<meta property="og:title" content="Valenox — Your health stays on your phone">
+<meta property="og:description" content="A free, local-first daily health companion for Indian families. English and Hindi. No account, no cloud.">
+<meta property="og:image" content="assets/valenox-poster.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="assets/valenox-mark.svg">
+<link rel="apple-touch-icon" href="assets/valenox-mark.svg">
+<meta name="theme-color" content="#05070d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="nav__brand" href="#top">
+    <img class="mark" src="assets/valenox-mark-dark.svg" alt="" width="34" height="34">
+    <span>VALENOX</span>
+  </a>
+  <nav class="nav__links">
+    <a href="#modules">Modules</a>
+    <a href="#trends">Trends</a>
+    <a href="#more">Everything else</a>
+    <a href="#privacy">Privacy</a>
+    <a href="#get" class="nav__cta">Get the app</a>
+  </nav>
+</header>
+
+<!-- ─────────────────────────  HERO  ───────────────────────── -->
+<section class="hero" id="top">
+  <div class="hero__copy">
+    <p class="eyebrow">Android · English + हिन्दी · Free</p>
+    <h1 class="hero__title">
+      YOUR HEALTH<br>
+      STAYS ON <span class="glow">YOUR PHONE</span>
+    </h1>
+    <p class="lede">
+      Valenox is a daily health companion built for Indian families. Scan a plate of
+      dal and roti for real numbers, read your pulse with the camera, keep your
+      medicines on time, and get one honest score for the day. No account. No cloud
+      sync. Nothing to cancel.
+    </p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#get">Get the app</a>
+      <a class="btn btn--ghost" href="#modules">See what it does</a>
+    </div>
+    <p class="hero__note">
+      Everything below is a real screen recording from the shipping build (v1.0.5) —
+      no mockups, no rendered concepts.
+    </p>
+  </div>
+
+  <div class="hero__device">
+    <div class="phone phone--hero">
+      <div class="phone__screen">
+        <video
+          autoplay muted loop playsinline
+          poster="assets/valenox-poster.jpg"
+          aria-label="Screen recording of the Valenox app: daily plan, food scanner, trends, heart rate, medicines and guided breathing.">
+          <source src="assets/valenox-demo.webm" type="video/webm">
+          <source src="assets/valenox-demo.mp4" type="video/mp4">
+          <img src="assets/valenox-poster.jpg" alt="The Valenox home dashboard showing the day's plan progress.">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────  STATS  ───────────────────────── -->
+<section class="stats" aria-label="Valenox at a glance">
+  <div class="stat"><span class="stat__num glow">14</span><span class="stat__label">Modules, one download</span></div>
+  <div class="stat"><span class="stat__num glow">300</span><span class="stat__label">Indian dishes, bundled offline</span></div>
+  <div class="stat"><span class="stat__num glow">2</span><span class="stat__label">Languages, EN + हिन्दी</span></div>
+  <div class="stat"><span class="stat__num glow">0</span><span class="stat__label">Accounts to create</span></div>
+  <div class="stat"><span class="stat__num glow">&#8377;0</span><span class="stat__label">To download and use</span></div>
+</section>
+
+<!-- ─────────────────────────  MODULES  ───────────────────────── -->
+<section class="section" id="modules">
+  <div class="section__head">
+    <p class="eyebrow">What's inside</p>
+    <h2 class="h2">BUILT FOR THE WAY <span class="glow">INDIA EATS,<br>WALKS AND FORGETS ITS PILLS</span></h2>
+  </div>
+
+  <!-- Food scanner -->
+  <article class="feature">
+    <div class="feature__text">
+      <p class="kicker">01 — AI Food Scanner</p>
+      <h3 class="h3">Photograph the plate.<br>Get <span class="glow">katori-level</span> numbers.</h3>
+      <p>
+        Point the camera at everything on the thali. A vision model names the dishes,
+        then every match is grounded against a bundled table of 300 Indian foods — so
+        you get methi paratha by the piece and sabzi by the katori, not "mixed
+        vegetables, 1 serving."
+      </p>
+      <ul class="ticks">
+        <li>Correct any item before it's logged</li>
+        <li>Works offline by name — dal, daal and dhal all match</li>
+        <li>Portions in katori, roti and cups</li>
+      </ul>
+      <p class="fineprint">
+        Nutrition values are estimates for Indian home cooking. Validation against
+        ICMR–NIN's Indian Food Composition Tables is in progress.
+      </p>
+    </div>
+    <div class="feature__shot">
+      <div class="phone"><div class="phone__screen">
+        <img src="assets/shots/scan.png" alt="The Valenox food scanner showing methi paratha, drumstick curry and lauki ki sabzi logged for a total of 910 kcal." loading="lazy" width="420" height="880">
+      </div></div>
+    </div>
+  </article>
+
+  <!-- Health score -->
+  <article class="feature feature--flip">
+    <div class="feature__text">
+      <p class="kicker">02 — Daily Health Score</p>
+      <h3 class="h3">One number.<br>And it <span class="glow">shows its working</span>.</h3>
+      <p>
+        Steps, water, calories and medicines roll into a single 0–100 score. Tap it
+        and you see the whole arithmetic — what each part contributed and what it was
+        out of. Nothing is hidden behind a wellness ring.
+      </p>
+      <ul class="ticks">
+        <li>Modules you didn't use are renormalised out, never counted as zero</li>
+        <li>Day one shows a friendly locked state, not a punishing 0</li>
+        <li>The ring is never red — it's a companion, not a verdict</li>
+      </ul>
+    </div>
+    <div class="feature__shot">
+      <div class="phone"><div class="phone__screen">
+        <img src="assets/shots/score.png" alt="The health score breakdown sheet showing today's plan progress and yesterday's points for steps, calories, water, medicine and consistency." loading="lazy" width="420" height="880">
+      </div></div>
+    </div>
+  </article>
+
+  <!-- Heart rate -->
+  <article class="feature">
+    <div class="feature__text">
+      <p class="kicker">03 — Heart Rate</p>
+      <h3 class="h3">Your pulse, from<br>the <span class="glow">camera you own</span>.</h3>
+      <p>
+        Cover the back camera and flash with a fingertip, sit still for twenty
+        seconds. Valenox reads the colour change in your fingertip and returns a BPM,
+        the zone it falls in, and a thirty-day resting average — no strap, no watch,
+        no subscription.
+      </p>
+      <ul class="ticks">
+        <li>Five training zones plus resting</li>
+        <li>Thirty-day resting trend, so improvement is visible</li>
+        <li>Every reading kept on the device</li>
+      </ul>
+      <p class="fineprint">
+        A wellness estimate from your camera. Not a medical device and not medical
+        advice.
+      </p>
+    </div>
+    <div class="feature__shot">
+      <div class="phone"><div class="phone__screen">
+        <img src="assets/shots/heartrate.png" alt="The Valenox heart rate screen: measure with the camera, last reading 113 BPM, resting average 60 BPM, and a zone chart." loading="lazy" width="420" height="880">
+      </div></div>
+    </div>
+  </article>
+
+  <!-- Medicine -->
+  <article class="feature feature--flip">
+    <div class="feature__text">
+      <p class="kicker">04 — Medicine Reminders</p>
+      <h3 class="h3">Reminders that<br><span class="glow">actually fire</span>.</h3>
+      <p>
+        Most Indian phones kill background apps to save battery, and most reminder
+        apps quietly stop working a week after you install them. Valenox books each
+        dose as an exact alarm clock, re-arms after every dose, and heals itself
+        after reboots and updates.
+      </p>
+      <ul class="ticks">
+        <li>Take or Skip straight from the notification</li>
+        <li>Survives OEM battery optimisation</li>
+        <li>A one-minute self-check proves delivery on your own phone</li>
+      </ul>
+    </div>
+    <div class="feature__shot">
+      <div class="phone"><div class="phone__screen">
+        <img src="assets/shots/medicine.png" alt="The medicines screen showing today's dose of BP at 10:00 marked Taken, and a card explaining how to make reminders reliable." loading="lazy" width="420" height="880">
+      </div></div>
+    </div>
+  </article>
+
+  <!-- Steps + water -->
+  <article class="feature">
+    <div class="feature__text">
+      <p class="kicker">05 — Steps &amp; Water</p>
+      <h3 class="h3">Two taps a day is<br>the <span class="glow">whole ritual</span>.</h3>
+      <p>
+        Steps come off the phone's own sensor and stay correct across reboots and
+        midnight rollovers. Water is one tap per glass with an undo, and the goal is
+        derived from your body weight rather than a flat number pulled out of the air.
+      </p>
+      <ul class="ticks">
+        <li>Distance, calories burned and a streak</li>
+        <li>Manual fallback when the phone has no step sensor</li>
+        <li>Every log updates the day's score immediately</li>
+      </ul>
+    </div>
+    <div class="feature__shot">
+      <div class="phone"><div class="phone__screen">
+        <img src="assets/shots/water.png" alt="The Valenox home dashboard showing 5305 of 10000 steps, a 3-day streak, heart rate, and water at 5 of 12 glasses with an undo option." loading="lazy" width="420" height="880">
+      </div></div>
+    </div>
+  </article>
+
+  <!-- Breathing -->
+  <article class="feature feature--flip">
+    <div class="feature__text">
+      <p class="kicker">06 — Guided Breathing</p>
+      <h3 class="h3">Two minutes to<br><span class="glow">come back down</span>.</h3>
+      <p>
+        Ten rounds of paced breathing with a petal that opens as you inhale and closes
+        as you exhale. Sound optional. It's the one screen in the app that asks you to
+        do nothing at all.
+      </p>
+      <p class="fineprint">General wellness practice, not medical advice or treatment.</p>
+    </div>
+    <div class="feature__shot">
+      <div class="phone"><div class="phone__screen">
+        <img src="assets/shots/breathing_active.png" alt="The guided breathing screen mid-session, showing an open petal animation with the prompt Breathe in, round 1 of 10." loading="lazy" width="420" height="880">
+      </div></div>
+    </div>
+  </article>
+
+  <!-- Profile -->
+  <article class="feature">
+    <div class="feature__text">
+      <p class="kicker">07 — Your Numbers</p>
+      <h3 class="h3">BMI on the cutoffs<br>that <span class="glow">apply to you</span>.</h3>
+      <p>
+        Onboarding takes a minute and gives you BMI against WHO Asian-Indian cutoffs,
+        BMR by Mifflin–St Jeor, a body-fat estimate, a healthy weight range for your
+        height, and the daily calorie, water and step goals everything else measures
+        against.
+      </p>
+      <p class="fineprint">
+        These are estimates for awareness. Not medical advice. The screenshot shows
+        the developer's own profile.
+      </p>
+    </div>
+    <div class="feature__shot">
+      <div class="phone"><div class="phone__screen">
+        <img src="assets/shots/profile.png" alt="A Valenox profile screen showing a BMI dial at 26.4, healthy weight range, BMR, body fat estimate and daily calorie, water and step goals." loading="lazy" width="420" height="880">
+      </div></div>
+    </div>
+  </article>
+</section>
+
+<!-- ─────────────────────────  TRENDS  ───────────────────────── -->
+<section class="section section--tight" id="trends">
+  <div class="section__head">
+    <p class="eyebrow">The long view</p>
+    <h2 class="h2">TODAY, THIS WEEK,<br><span class="glow">THIS MONTH</span></h2>
+    <p class="section__sub">
+      The same four numbers at three zoom levels. Weekly bars against your goal line,
+      heart-rate zones across the week, and a month where the bigger the bubble, the
+      more you walked.
+    </p>
+  </div>
+  <div class="trio">
+    <figure class="trio__item">
+      <div class="phone"><div class="phone__screen">
+        <img src="assets/shots/trends_today.png" alt="Trends, Today view: 5305 steps, 345 calories, 113 BPM, 4 glasses of water, and a heart rate zone chart." loading="lazy" width="420" height="880">
+      </div></div>
+      <figcaption>Today — the four numbers, plus where your heart rate sat.</figcaption>
+    </figure>
+    <figure class="trio__item">
+      <div class="phone"><div class="phone__screen">
+        <img src="assets/shots/trends_weekly_bpm.png" alt="Trends, Weekly view: calories consumed versus burned, a BPM zone chart averaging 64 BPM, and water glasses against a goal of 12." loading="lazy" width="420" height="880">
+      </div></div>
+      <figcaption>Weekly — consumed against burned, BPM zones, water against goal.</figcaption>
+    </figure>
+    <figure class="trio__item">
+      <div class="phone"><div class="phone__screen">
+        <img src="assets/shots/trends_monthly.png" alt="Trends, Monthly view: an August 2026 calendar where each active day is a teal bubble sized by step count, with a month average of 63 BPM." loading="lazy" width="420" height="880">
+      </div></div>
+      <figcaption>Monthly — bigger bubble, more steps. Tap a day for the count.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ─────────────────────────  MORE MODULES  ───────────────────────── -->
+<section class="section" id="more">
+  <div class="section__head">
+    <p class="eyebrow">And there's more under the hood</p>
+    <h2 class="h2">SIX MORE MODULES,<br><span class="glow">SAME ONE APP</span></h2>
+    <p class="section__sub">
+      No second download, no upsell, no separate account. Tap "More" and the rest of
+      the family's health is already in there.
+    </p>
+  </div>
+
+  <div class="modules">
+    <article class="mod">
+      <div class="phone phone--sm"><div class="phone__screen">
+        <img src="assets/shots/assistant.png" alt="The Valenox assistant answering a question about today's step count using the user's own logged data." loading="lazy" width="420" height="880">
+      </div></div>
+      <h3 class="mod__title">AI Health Assistant</h3>
+      <p>Ask about your own logged data in English or Hindi. It refuses diagnosis, dosage and drug interactions, and sends you to a doctor instead.</p>
+    </article>
+
+    <article class="mod">
+      <div class="phone phone--sm"><div class="phone__screen">
+        <img src="assets/shots/diet.png" alt="The diet planner showing region and preference filters with a seven-day Indian meal plan of phulka, dal tadka, methi paratha and palak paneer." loading="lazy" width="420" height="880">
+      </div></div>
+      <h3 class="mod__title">Diet Planner</h3>
+      <p>Pick North, South, East, West or Northeast and veg, egg or non-veg. Get a week of real meals — phulka and aloo matar, not "grilled chicken salad".</p>
+    </article>
+
+    <article class="mod">
+      <div class="phone phone--sm"><div class="phone__screen">
+        <img src="assets/shots/remedies.png" alt="The home remedies list showing ajwain for gas, aloe vera for burns and ashwagandha for stress, each tagged with an evidence badge." loading="lazy" width="420" height="880">
+      </div></div>
+      <h3 class="mod__title">Home Remedies</h3>
+      <p>Fifty remedies, fully offline, each carrying an honest badge — <em>Some evidence</em> or <em>Traditional use</em>. Ashwagandha doesn't get to pretend it's a cure.</p>
+    </article>
+
+    <article class="mod">
+      <div class="phone phone--sm"><div class="phone__screen">
+        <img src="assets/shots/vaccinations.png" alt="The vaccinations screen listing an upcoming Td/Tdap adult booster and annual influenza shot with Done and Skip actions." loading="lazy" width="420" height="880">
+      </div></div>
+      <h3 class="mod__title">Vaccinations &amp; Checkups</h3>
+      <p>The IAP immunisation schedule built in, plus adult boosters and your own checkup dates. Mark done or skip; nothing nags twice.</p>
+    </article>
+
+    <article class="mod">
+      <div class="phone phone--sm"><div class="phone__screen">
+        <img src="assets/shots/lab.png" alt="The lab reports screen offering to add a report photo or PDF and read out the values for you to check." loading="lazy" width="420" height="880">
+      </div></div>
+      <h3 class="mod__title">Lab Report Reader</h3>
+      <p>Photograph a report or add the PDF. Every extracted value goes on a confirm screen before it's saved — an explanation for your understanding, never a diagnosis.</p>
+    </article>
+
+    <article class="mod">
+      <div class="phone phone--sm"><div class="phone__screen">
+        <img src="assets/shots/family.png" alt="The family screen showing the selected member and options to add a family member or set a family PIN." loading="lazy" width="420" height="880">
+      </div></div>
+      <h3 class="mod__title">Family Profiles</h3>
+      <p>Add parents and children on one phone. Lab reports, diet plans, vaccinations and the assistant all follow whoever is selected — behind a family PIN.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ─────────────────────────  HINDI  ───────────────────────── -->
+<section class="section split" id="hindi">
+  <div class="split__text">
+    <p class="kicker">Language</p>
+    <h2 class="h2">पूरा ऐप, <span class="glow">हिन्दी में</span>.</h2>
+    <p>
+      Hindi isn't a settings page with three translated buttons behind it. Every
+      screen, every reminder, every empty state is written in Hindi — and written in
+      the respectful आप register, never तुम. English is the default; Hindi is one tap
+      away in onboarding and switchable later.
+    </p>
+    <ul class="ticks">
+      <li>Noto Sans Devanagari bundled in the app, nothing downloaded</li>
+      <li>Same line height in both languages, so layouts never reflow</li>
+      <li>Reviewed by a human, not machine-translated</li>
+    </ul>
+  </div>
+  <div class="split__shot">
+    <div class="phone"><div class="phone__screen">
+      <img src="assets/shots/home_hi.png" alt="The Valenox home dashboard in Hindi, reading नमस्ते Dippu जी with आज की योजना at 59 percent, क़दम and पानी cards." loading="lazy" width="420" height="880">
+    </div></div>
+  </div>
+</section>
+
+<!-- ─────────────────────────  PRIVACY  ───────────────────────── -->
+<section class="section section--tight" id="privacy">
+  <div class="section__head">
+    <p class="eyebrow">Where your data lives</p>
+    <h2 class="h2">THERE IS NO<br><span class="glow">SERVER TO BREACH</span></h2>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <h3 class="card__title">No account, ever</h3>
+      <p>No sign-up, no phone number, no OTP. Open the app and start. There is nothing to log into and nothing to delete later.</p>
+    </div>
+    <div class="card">
+      <h3 class="card__title">No backend</h3>
+      <p>Valenox has no server. Your weight, your medicines, your readings and your meals are rows in a database on your own phone.</p>
+    </div>
+    <div class="card">
+      <h3 class="card__title">One outbound call</h3>
+      <p>The only thing that ever leaves the device is the photo you choose to scan and the questions you type to the assistant, sent to the AI provider. Nothing else, ever.</p>
+    </div>
+    <div class="card">
+      <h3 class="card__title">You hold the backup</h3>
+      <p>Export everything to a JSON file you keep. Restore validates the whole file before it writes anything, so a bad import can never destroy what you have.</p>
+    </div>
+  </div>
+  <p class="fineprint fineprint--center">
+    Valenox is a wellness companion, not a medical device. It does not diagnose,
+    prescribe or advise on dosage. Talk to a doctor.
+  </p>
+</section>
+
+<!-- ─────────────────────────  GET  ───────────────────────── -->
+<section class="section get" id="get">
+  <h2 class="h2">START <span class="glow">TODAY</span>.</h2>
+  <p class="get__sub">
+    Free, and free of the usual bargain — nothing to pay, nothing harvested.
+  </p>
+
+  <div class="placeholder">
+    <p class="placeholder__tag">Placeholder — not live yet</p>
+    <p>
+      Valenox is in a closed test cohort while the reminder reliability and food-scan
+      quality targets are measured on real phones. The Play Store link and the public
+      launch date go here once that read is in.
+    </p>
+    <div class="placeholder__row">
+      <span class="chip">Google Play link — TBD</span>
+      <span class="chip">Launch date — TBD</span>
+    </div>
+  </div>
+
+  <p class="fineprint fineprint--center">
+    Requires Android 8.0 or newer. Currently distributed as a signed APK to invited
+    testers only.
+  </p>
+</section>
+
+<footer class="footer">
+  <div class="footer__brand">
+    <img class="mark" src="assets/valenox-mark-dark.svg" alt="" width="30" height="30">
+    <span>VALENOX</span>
+  </div>
+  <nav class="footer__links">
+    <a href="#modules">Modules</a>
+    <a href="#privacy">Privacy</a>
+    <a href="privacy-policy.html">Privacy policy</a>
+    <a href="../index.html">kumardippu.com</a>
+  </nav>
+  <p class="footer__note">
+    Built in India. Screens on this page are unedited captures from Valenox v1.0.5.
+  </p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

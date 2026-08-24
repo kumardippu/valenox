@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Valenox</title>
+<meta name="description" content="Privacy policy for Valenox, a local-first health companion app for Android.">
+<link rel="icon" type="image/svg+xml" href="assets/valenox-mark.svg">
+<meta name="theme-color" content="#05070d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Policy-specific layout — reuses the landing page's tokens and type scale. */
+  .policy {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 64px var(--pad) 120px;
+  }
+  .policy__meta {
+    color: var(--ink-faint);
+    font-size: 14px;
+    margin-bottom: 44px;
+  }
+  .policy__meta strong { color: var(--ink-dim); font-weight: 600; }
+  .policy h2 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+    font-size: 26px;
+    color: #fff;
+    margin: 56px 0 18px;
+    padding-top: 8px;
+    border-top: 1px solid var(--line);
+    scroll-margin-top: 90px;
+  }
+  .policy h2:first-of-type { border-top: none; margin-top: 0; padding-top: 0; }
+  .policy h3 {
+    font-family: Manrope, sans-serif;
+    font-weight: 800;
+    font-size: 16.5px;
+    color: var(--ink);
+    margin: 26px 0 10px;
+  }
+  .policy p, .policy li { color: var(--ink-dim); font-size: 16px; line-height: 1.7; }
+  .policy ul, .policy ol { margin: 0 0 16px; padding-left: 22px; }
+  .policy li { margin-bottom: 8px; }
+  .policy a { color: var(--blue); }
+  .policy strong { color: var(--ink); }
+  .toc {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 8px;
+    background: rgba(255,255,255,.02);
+  }
+  .toc p { margin: 0 0 10px; font-size: 12.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+  .toc ol { columns: 2; column-gap: 32px; margin: 0; padding-left: 20px; }
+  .toc li { font-size: 14.5px; margin-bottom: 6px; break-inside: avoid; }
+  .toc a { color: var(--ink-dim); }
+  .toc a:hover { color: var(--blue); }
+  table.perm { width: 100%; border-collapse: collapse; margin: 14px 0 22px; font-size: 14.5px; }
+  table.perm th, table.perm td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); color: var(--ink-dim); }
+  table.perm th { color: var(--ink); font-weight: 700; font-size: 12.5px; text-transform: uppercase; letter-spacing: .06em; }
+  table.perm td:first-child { color: var(--ink); font-weight: 600; white-space: nowrap; }
+  .callout {
+    border: 1px solid rgba(76,201,255,.3);
+    background: rgba(76,201,255,.05);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 18px 0;
+    font-size: 15px;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+  @media (max-width: 560px) {
+    .toc ol { columns: 1; }
+  }
+</style>
+</head>
+<body>
+
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="nav__brand" href="index.html">
+    <img class="mark" src="assets/valenox-mark-dark.svg" alt="" width="34" height="34">
+    <span>VALENOX</span>
+  </a>
+  <nav class="nav__links">
+    <a href="index.html">Back to Valenox</a>
+  </nav>
+</header>
+
+<main class="policy">
+  <p class="eyebrow">Legal</p>
+  <h1 class="h2" style="margin-bottom:14px;">PRIVACY <span class="glow">POLICY</span></h1>
+  <p class="policy__meta">
+    <strong>Effective date:</strong> August 4, 2026 &nbsp;·&nbsp;
+    <strong>App:</strong> Valenox (package <code>com.valenox.app</code>) &nbsp;·&nbsp;
+    <strong>Version covered:</strong> 1.0.5
+  </p>
+
+  <p>
+    Valenox is built by an individual developer, Dippu Kumar, as a local-first health
+    companion for Indian families. This policy explains, in plain language, what data
+    the app touches, where it goes, and what stays only on your phone. If a sentence
+    here is unclear, that's a bug in this document — write to
+    <a href="mailto:kumardippu@gmail.com">kumardippu@gmail.com</a> and it will be fixed.
+  </p>
+
+  <div class="toc">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#approach">Our approach</a></li>
+      <li><a href="#collect">Information we collect</a></li>
+      <li><a href="#ai">AI features and what they send</a></li>
+      <li><a href="#analytics">Analytics</a></li>
+      <li><a href="#permissions">App permissions</a></li>
+      <li><a href="#storage">Storage, retention and deletion</a></li>
+      <li><a href="#sharing">Sharing and third parties</a></li>
+      <li><a href="#children">Family profiles and children</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#rights">Your choices</a></li>
+      <li><a href="#medical">Medical disclaimer</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </div>
+
+  <h2 id="approach">1. Our approach</h2>
+  <p>
+    Valenox has <strong>no user account and no backend server</strong>. There is
+    nothing to sign up for and nothing for us to host on your behalf. Your health
+    data — profile, food diary, steps, water, medicines, heart-rate readings, lab
+    reports, vaccination records and chat history — is stored in a database on your
+    own device and is not synced to any cloud service we operate, because no such
+    service exists.
+  </p>
+  <p>
+    Two things do leave your device: requests to the AI provider when you actively
+    use an AI feature (Section 3), and anonymous usage analytics (Section 4). Nothing
+    else is transmitted anywhere by this app.
+  </p>
+
+  <h2 id="collect">2. Information we collect</h2>
+  <h3>2.1 Information you provide directly</h3>
+  <ul>
+    <li><strong>Onboarding profile:</strong> date of birth, sex, height, weight, activity level and goal. Used to calculate BMI, BMR, body-fat estimate and your daily targets — entirely on-device.</li>
+    <li><strong>Logged health data:</strong> food diary entries, water glasses, medicines and dose times, manually entered steps (if your phone has no step sensor), lab report values you confirm, vaccination and checkup dates, and diet-plan preferences (region, dietary type).</li>
+    <li><strong>Camera-derived data:</strong> photographs you take of meals or lab reports, and heart-rate readings measured via your camera and flash (see 2.2 and Section 3).</li>
+    <li><strong>Assistant conversations:</strong> messages you type to the in-app AI assistant.</li>
+  </ul>
+
+  <h3>2.2 Camera use</h3>
+  <p>
+    Valenox uses the camera in two different ways:
+  </p>
+  <ul>
+    <li><strong>Food scanning</strong> opens your phone's own camera app via a standard Android camera intent. Valenox does not hold direct camera access for this — the photo is handed back to the app once you've taken it, then optionally sent for AI analysis (Section 3).</li>
+    <li><strong>Heart-rate measurement</strong> uses direct camera and flash access: you cover the rear camera and flash with a fingertip, and the app reads the colour change over roughly twenty seconds to estimate your pulse. This reading, and the brief video frames used to calculate it, are processed and discarded on-device — they are not saved as a video file and are not sent anywhere.</li>
+  </ul>
+
+  <h3>2.3 Sensor and device data</h3>
+  <ul>
+    <li><strong>Step count</strong> comes from your phone's built-in step sensor (or Google Play Services' Recording API, on devices that support it), read locally to build your daily and historical step counts.</li>
+  </ul>
+
+  <h2 id="ai">3. AI features and what they send</h2>
+  <p>
+    When you actively use one of the features below, the relevant content is sent
+    over an encrypted connection to our AI service provider (currently
+    <strong>Groq</strong>, an AI inference provider used via an OpenAI-compatible
+    API) for processing, and a response is returned to the app. This only happens
+    when you initiate the action — nothing is sent in the background.
+  </p>
+  <table class="perm">
+    <tr><th>Feature</th><th>What is sent</th></tr>
+    <tr><td>Food scanner</td><td>The photo of your plate</td></tr>
+    <tr><td>Lab report reader</td><td>The photo or PDF of your report</td></tr>
+    <tr><td>AI health assistant</td><td>The message you type, plus a short summary of the active profile's last 30 days of logged activity (steps, water, meals, medicines, health score) so the assistant can answer questions about your own data</td></tr>
+    <tr><td>Diet planner</td><td>Your profile stats (region, dietary preference, calorie target) — no name or contact details</td></tr>
+  </table>
+  <div class="callout">
+    <p>
+      <strong>Lab reports specifically:</strong> a report photo may contain your
+      name, date of birth and lab ID printed on the page. Only upload reports
+      you're comfortable sharing with the AI provider for this purpose. The
+      original file stays on your phone and is never included in the export
+      feature described in Section 6.
+    </p>
+  </div>
+  <p>
+    We do not control how long the AI provider retains request data on their
+    infrastructure; we do not instruct them to train models on your data, and we do
+    not receive or store a copy of what you send them beyond what's already saved
+    in your local diary (e.g. the dish names and calories that come back from a
+    food scan). Every AI response carries a "not medical advice" disclosure —
+    see Section 11.
+  </p>
+
+  <h2 id="analytics">4. Analytics</h2>
+  <p>
+    Valenox uses <strong>Google Analytics for Firebase</strong> to understand which
+    features are used and to fix problems. This is limited, by design, to
+    behavioral signals:
+  </p>
+  <ul>
+    <li>Screens viewed and features opened (e.g. "Scan" tab opened, "Trends" viewed)</li>
+    <li>Coarse action events (e.g. a food item was logged, a reminder was scheduled or actioned, an AI call succeeded or failed) — logged as a category and a label, never as free text</li>
+    <li>Standard app-analytics device signals: an app-instance identifier, device model, OS version, language, and approximate country/region (derived from IP address, not GPS)</li>
+    <li>Basic diagnostic and performance data (e.g. app crashes)</li>
+  </ul>
+  <p>
+    <strong>What analytics never receives:</strong> lab values, medicine names,
+    body-weight or other health numbers, food or dish names, chat messages, or any
+    other free text you type. This boundary is enforced in the app's code, not just
+    promised in this document.
+  </p>
+  <p>
+    You can limit ad-related and analytics identifiers at the device level via
+    <strong>Settings → Google → Ads</strong> on your phone, which applies across
+    apps that use Google's advertising or analytics identifiers.
+  </p>
+
+  <h2 id="permissions">5. App permissions</h2>
+  <p>Valenox requests the following Android permissions, each tied to a specific feature:</p>
+  <table class="perm">
+    <tr><th>Permission</th><th>Why it's needed</th></tr>
+    <tr><td>Internet</td><td>To reach the AI provider when you use an AI feature, and to send analytics events</td></tr>
+    <tr><td>Camera</td><td>Heart-rate measurement only (see 2.2). Food scanning uses the system camera app instead and needs no direct camera permission.</td></tr>
+    <tr><td>Activity recognition</td><td>To read your phone's step counter</td></tr>
+    <tr><td>Post notifications</td><td>To show medicine, water and vaccination reminders</td></tr>
+    <tr><td>Schedule exact alarms</td><td>So medicine reminders fire at the exact time you set, not "around" it</td></tr>
+    <tr><td>Receive boot completed / wake lock</td><td>So reminders survive a phone restart and fire reliably</td></tr>
+    <tr><td>Ignore battery optimizations (optional prompt)</td><td>Some phone manufacturers kill background apps aggressively; this optional prompt helps reminders keep working on those devices</td></tr>
+  </table>
+
+  <h2 id="storage">6. Storage, retention and deletion</h2>
+  <p>
+    Your health data is stored in a local database on your device and is excluded
+    from Android's automatic cloud backup (<code>allowBackup="false"</code>) — we
+    do not want a copy of your health data sitting in your Google account backup
+    without your explicit action.
+  </p>
+  <ul>
+    <li><strong>Your own backup:</strong> the in-app Export feature writes a JSON file you control, which you can store or transfer however you choose. Restoring a backup validates the entire file before writing anything, so a corrupt or partial file cannot damage your existing data.</li>
+    <li><strong>Deleting your data:</strong> uninstalling the app deletes the local database and everything in it. There is no server-side copy for us to delete, because none exists.</li>
+    <li><strong>Diagnostics snapshot:</strong> the in-app "Share diagnostics" feature lets you export a local crash/usage log through your phone's normal share sheet (e.g. to email it to support). This only happens if you tap it — it is not sent automatically.</li>
+  </ul>
+
+  <h2 id="sharing">7. Sharing and third parties</h2>
+  <p>We do not sell your data, and we do not run ads in Valenox. Data reaches outside parties only as follows:</p>
+  <ul>
+    <li><strong>Groq</strong> (or another AI inference provider we may switch to) — processes the content described in Section 3, only when you use an AI feature.</li>
+    <li><strong>Google (Firebase Analytics)</strong> — receives the behavioral signals described in Section 4.</li>
+    <li><strong>Anyone you choose</strong> — if you use the Export or Share Diagnostics features and then send the resulting file yourself.</li>
+  </ul>
+  <p>We do not otherwise share, rent or sell any data to advertisers, data brokers or other third parties.</p>
+
+  <h2 id="children">8. Family profiles and children</h2>
+  <p>
+    Valenox lets one adult set up additional profiles for family members, including
+    children, under a shared family PIN. A child's logged data (growth, vaccination
+    dates, notes) is stored locally on the same device as the adult's, under the
+    same rules as Section 6. Child profiles are deliberately blocked from the AI
+    assistant and from certain modules — nothing typed by or about a child profile
+    is sent to the AI provider through the assistant feature. Valenox is not
+    directed at children, is not designed for a child to use unsupervised, and does
+    not knowingly collect data directly from a child without a parent or guardian
+    operating the app.
+  </p>
+
+  <h2 id="security">9. Security</h2>
+  <p>
+    Network requests to the AI provider and to analytics use encrypted (HTTPS)
+    connections. Because your health data lives locally rather than on a server we
+    control, its security also depends on your device's own protections — we
+    recommend using your phone's lock screen and keeping its OS updated. If you
+    share your phone with family members, the in-app family PIN (Section 8) adds a
+    layer of protection for shared-device use, but is not a substitute for securing
+    the device itself.
+  </p>
+
+  <h2 id="rights">10. Your choices</h2>
+  <ul>
+    <li><strong>Access and portability:</strong> everything the app knows about you is visible in the app itself, and exportable in full via the Export feature at any time.</li>
+    <li><strong>Deletion:</strong> uninstall the app, or delete individual entries/profiles from within the app.</li>
+    <li><strong>AI features are optional:</strong> every AI-powered feature (scan, assistant, lab reader, diet planner) has a manual, fully offline alternative — search-by-name food logging works without any network call.</li>
+    <li><strong>Analytics:</strong> see the device-level opt-out described in Section 4.</li>
+  </ul>
+  <p>
+    If you are in a jurisdiction with a statutory right to request details of, or
+    deletion of, data held about you (for example under India's DPDP Act or the
+    EU's GDPR), write to <a href="mailto:kumardippu@gmail.com">kumardippu@gmail.com</a>
+    — though in most cases the in-app Export and uninstall already give you full
+    access to, and control over, your data without needing to ask us at all.
+  </p>
+
+  <h2 id="medical">11. Medical disclaimer</h2>
+  <p>
+    Valenox is a wellness companion, not a medical device. BMI, BMR, body-fat,
+    calorie targets, heart-rate readings and the AI assistant's answers are
+    estimates for general awareness, not a diagnosis, prescription or medical
+    advice. The assistant is built to refuse questions about diagnosis, dosing and
+    drug interactions and to direct you to a qualified doctor instead. Always
+    consult a healthcare professional for medical concerns.
+  </p>
+
+  <h2 id="changes">12. Changes to this policy</h2>
+  <p>
+    If this policy changes in a way that materially affects what data is collected
+    or how it's used, the "Effective date" above will be updated and, where
+    practical, noted in the app's release notes. Continued use of the app after a
+    change means you accept the updated policy.
+  </p>
+
+  <h2 id="contact">13. Contact</h2>
+  <p>
+    Valenox is built and maintained by one person. For privacy questions, data
+    requests, or anything else: <a href="mailto:kumardippu@gmail.com">kumardippu@gmail.com</a>.
+  </p>
+</main>
+
+<footer class="footer">
+  <div class="footer__brand">
+    <img class="mark" src="assets/valenox-mark-dark.svg" alt="" width="30" height="30">
+    <span>VALENOX</span>
+  </div>
+  <nav class="footer__links">
+    <a href="index.html">Home</a>
+    <a href="index.html#privacy">Privacy overview</a>
+    <a href="../index.html">kumardippu.com</a>
+  </nav>
+</footer>
+
+</body>
+</html>
