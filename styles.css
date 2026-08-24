@@ -449,6 +449,20 @@ a { color: var(--blue); text-decoration: none; }
 }
 .reveal.is-in { opacity: 1; transform: none; }
 
+/* Phones twist through 3D as they travel across the viewport, sitting flat and
+   fully legible when centred. main.js sets the custom properties; unset they
+   resolve to a flat, static phone. */
+.feature__shot,
+.split__shot { perspective: 1100px; }
+
+.feature__shot .phone,
+.split__shot .phone {
+  transform:
+    translateY(var(--drift, 0px))
+    rotateY(var(--twist, 0deg))
+    rotate(var(--tilt, 0deg));
+}
+
 /* ── Responsive ─────────────────────────────────────────── */
 @media (max-width: 940px) {
   .hero { grid-template-columns: 1fr; gap: 52px; padding-top: 52px; text-align: left; }
