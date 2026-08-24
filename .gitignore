@@ -1,0 +1,9 @@
+.DS_Store
+
+# Raw ad production inputs — not used by the site, only by assets/build-ad.py
+assets/raw/
+assets/ad_build/
+assets/music/
+
+# Duplicate Play Store screenshots — assets/shots/ is what the site actually uses
+assets/play_screenshots/
